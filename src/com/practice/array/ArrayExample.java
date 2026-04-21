@@ -1,6 +1,14 @@
 package com.practice.array;
 
-public class Array {
+public class ArrayExample {
+	public int id;
+	public String name;
+	
+	ArrayExample(int id,String name){
+		this.id=id;
+		this.name=name;
+	}
+	
 	public static void main(String[] args) {
 
 		// ARRAY DECLARATION
@@ -40,7 +48,15 @@ public class Array {
 		System.out.println("Size of the array - " + fourthArray.length);
 
 		// Array of Object
-
+		ArrayExample[] fifthArray;
+		fifthArray=new ArrayExample[3];
+		fifthArray[0]=new ArrayExample(1,"Hello");
+		fifthArray[1]=new ArrayExample(2, "Array");
+		fifthArray[2]=new ArrayExample(3,"Demo");
+		for(int i=0;i<fifthArray.length;i++) {
+			System.out.println("Array of Object - "+fifthArray[i]);
+		}
+		
 		// Access Element Outside Array
 		int[] sixtharray = { 40, 24, 50, 11, 61, 30 };
 		System.out.println("Accessing outside index - " + sixtharray[6]);
