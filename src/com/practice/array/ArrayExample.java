@@ -1,6 +1,7 @@
 package com.practice.array;
 
 public class ArrayExample {
+	
 	public int id;
 	public String name;
 	
@@ -12,15 +13,15 @@ public class ArrayExample {
 	public static void main(String[] args) {
 
 		// ARRAY DECLARATION
-		/*----
+		/*-----------------------
 		 * dataType[] arrayName;
 		 * dataType arrayName[];
-		 -----*/
+		 -------------------------*/
 
 		// ARRAY INITIALIZATION
-		/*---
+		/*-------------------------------------
 		 * dataType arrayName[]=new dataType[size];
-		 ---*/
+		 ------------------------------------------*/
 
 		int[] arr = { 4, 2, 6, 8 };
 		System.out.println("Array Length - " + arr.length);
