@@ -63,11 +63,36 @@ public class MultiDimensionalArrayExample {
 		 * index 2 corresponds to the third row.
 		 * --------------------------------------------------------------------------
 		 */
-		
-		
-		
-		//Accessing elements of array
-		int[][] arr3 = {{1,2},{3,4}};
-		System.out.println("Accessing "+arr3[0][1]);
+
+		// Example 3
+		// Accessing elements of array
+		int[][] arr3 = { { 1, 2 }, { 3, 4 } };
+		System.out.println("Array[0][1] - " + arr3[0][1]);
+
+		// Example 4
+		// Two Dimensional Array with User input
+
+		/*
+		 * -------------------------------------------------------------------------
+		 * Elements in three-dimensional arrays are commonly referred by x[i][j][k]
+		 * where 'i' is the array number, 'j' is the row number and 'k' is the column
+		 * number.
+		 * 
+		 * Note: In arrays if size of array is N. Its index will be from 0 to N-1.
+		 * Therefore, for row_index 2, actual row number is 2+1 = 3.
+		 * -------------------------------------------------------------------------
+		 */
+
+		// Example 5
+		// Three - Dimensional Array (3D-Array)
+
+		// Example 6
+		// assigning the values in 3D array using indexes
+
+		// Example 7
+		// Accessing Elements of Three-Dimensional Arrays
+
+		// Example 8
+		// Inserting a Multi-Dimensional Array During Runtime
 	}
 }
