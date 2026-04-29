@@ -24,7 +24,7 @@ public class FinalArrayExample {
 
 		// Example 3 - compilation error while reassigning
 		final FinalArrayExample f1 = new FinalArrayExample();
-		FinalArrayExample f2 = new FinalArrayExample();
+//		FinalArrayExample f2 = new FinalArrayExample();
 //		f1 = f2; // Compilation Error
 		System.out.println(f1.p);
 
