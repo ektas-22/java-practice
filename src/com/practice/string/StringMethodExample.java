@@ -12,7 +12,6 @@ public class StringMethodExample {
 		String str1 = "Hello World !";
 
 		// 1. int length() Method
-
 		System.out.println("Length - " + str1.length());
 
 		// 2. charAt(int i) Method
