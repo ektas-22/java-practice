@@ -16,6 +16,13 @@ public class StringBuilderExample {
 		StringBuilder sb2 = new StringBuilder(50);
 		sb2.append("This has initial capacity 50");
 		System.out.println("Capacity: " + sb2);
+		StringBuilder sb3 = new StringBuilder("Hello");
+		sb3.append("Java programmer");
+		System.out.println(sb3);
+		CharSequence ch = "Hello";
+		StringBuilder sb4 = new StringBuilder(ch);
+		System.out.println(sb4);
+
 	}
 
 }
