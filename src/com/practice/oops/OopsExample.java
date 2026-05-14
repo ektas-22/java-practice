@@ -1,12 +1,27 @@
 package com.practice.oops;
 
-import java.util.Scanner;
+class Student {
+	int id;
+	String n;
+
+	public Student(int id, String n) {
+		this.id = id;
+		this.n = n;
+	}
+}
 
 public class OopsExample {
-	public static void main(String[] args) {
 
-		Scanner src = new Scanner(System.in);
+	public static void main(String[] args) {
+		Student s1 = new Student(1, "John");
+		System.out.println(s1.id);
+		System.out.println(s1.n);
 		
-		src.close();
+		//OBJECT
+		//Declaration
+		//Dog tuffy;
+		
+		//Initialization
+		//tuffy = new Dog(Tuffy", "Papillon", 5, "White");
 	}
 }
