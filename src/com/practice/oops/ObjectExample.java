@@ -1,7 +1,14 @@
 package com.practice.oops;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 class Test {
-	public Test() {}
+	public Test() {
+	}
 }
 
 class Demo implements Cloneable {
@@ -10,6 +17,18 @@ class Demo implements Cloneable {
 	@Override
 	public Object clone() throws CloneNotSupportedException {
 		return super.clone();
+	}
+}
+
+class Student implements Serializable {
+	private String name;
+
+	public Student(String name) {
+		this.name = name;
+	}
+
+	public String toString(String name) {
+		return "Student: " + name;
 	}
 }
 
@@ -39,5 +58,16 @@ public class ObjectExample {
 		}
 
 		// 4. Using Deserialization
+		try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("student.ser"))) {
+			out.writeObject(new Student("Alice"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("student.ser"))) {
+			Student s = (Student) in.readObject();
+			System.out.println(s);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

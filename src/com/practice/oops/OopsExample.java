@@ -1,10 +1,10 @@
 package com.practice.oops;
 
-class Student {
+class StudentExample {
 	int id;
 	String n;
 
-	public Student(int id, String n) {
+	public StudentExample(int id, String n) {
 		this.id = id;
 		this.n = n;
 	}
@@ -13,7 +13,7 @@ class Student {
 public class OopsExample {
 
 	public static void main(String[] args) {
-		Student s1 = new Student(1, "John");
+		StudentExample s1 = new StudentExample(1, "John");
 		System.out.println(s1.id);
 		System.out.println(s1.n);
 		
