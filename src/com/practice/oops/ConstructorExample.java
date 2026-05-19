@@ -48,12 +48,37 @@ class Geeksss {
 	}
 }
 
+class GFG {
+	private GFG() {
+		System.out.println("Private constructor called");
+	}
+
+	public static void displayMessage() {
+		System.out.println("Hello from GFG class");
+	}
+}
+
+class GeekOverLoad {
+	GeekOverLoad(String name) {
+		System.out.println("Constructor with one argument- " + name);
+	}
+
+	GeekOverLoad(String name, int age) {
+		System.out.println("Constructor with two argument- " + name + age);
+	}
+
+	GeekOverLoad(long id) {
+		System.out.println("Constructor with one argumentbut different type - " + id);
+	}
+}
+
 public class ConstructorExample {
 	public static void main(String[] args) {
 		Student2 s1 = new Student2("Peter");
 		s1.display();
 
 		// Default Constructor
+		@SuppressWarnings("unused")
 		Geeks g1 = new Geeks();
 
 		// Parameterized Constructor
@@ -67,7 +92,12 @@ public class ConstructorExample {
 		System.out.println("Copy constructor: id- " + g4.id + " name-" + g4.name);
 
 		// Private Constructor
+		// GFG g5 = new GFG(); //Error: constructor is private
+		GFG.displayMessage();
 
 		// Constructor Overloading
+		GeekOverLoad g6 = new GeekOverLoad("John");
+		GeekOverLoad g7 = new GeekOverLoad("Laura", 30);
+		GeekOverLoad g8 = new GeekOverLoad(893486347);
 	}
 }

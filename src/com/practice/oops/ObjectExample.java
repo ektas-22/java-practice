@@ -21,6 +21,10 @@ class Demo implements Cloneable {
 }
 
 class Student implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
 
 	public Student(String name) {
