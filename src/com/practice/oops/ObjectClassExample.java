@@ -1,7 +1,5 @@
 package com.practice.oops;
 
-import java.io.Serializable;
-
 class First {
 	int age = 30;
 	String name = "Lisa";
