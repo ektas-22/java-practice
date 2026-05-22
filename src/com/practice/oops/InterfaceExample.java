@@ -24,6 +24,56 @@ class Cow extends Animal {
 	}
 }
 
+//Single Inheritance
+class SingleInheritance {
+	SingleInheritance() {
+		System.out.println("This is single inheritance parent class constructor");
+	}
+}
+
+class SingleInheritanceSub extends SingleInheritance {
+	SingleInheritanceSub() {
+		System.out.println("This is single inheritance sub class constructor");
+	}
+}
+
+//multilevel inheritance
+class Vehicle {
+	Vehicle() {
+		System.out.println("This is a Vehicle");
+	}
+}
+
+class FourWheeler extends Vehicle {
+	public FourWheeler() {
+		System.out.println("This is a fourwheeler");
+	}
+}
+
+class Car extends FourWheeler {
+	Car() {
+		System.out.println("This four wheeler vehicle is a car");
+	}
+}
+
+class Vehicle1 {
+	Vehicle1() {
+		System.out.println("This is a vehicle1");
+	}
+}
+
+class Car1 extends Vehicle1 {
+	Car1() {
+		System.out.println("This vehicle1 is a car1");
+	}
+}
+
+class Bus extends Vehicle1 {
+	Bus() {
+		System.out.println("This vehicle is a bus");
+	}
+}
+
 public class InterfaceExample {
 	public static void main(String[] args) {
 		Animal a;
@@ -33,5 +83,19 @@ public class InterfaceExample {
 		a.sound();
 		a = new Cow();
 		a.sound();
+
+		// single inheritance
+		SingleInheritanceSub si = new SingleInheritanceSub();
+
+		// multilevel inheritance
+		Car cm = new Car();
+
+		// hierarchical inheritance
+		Car1 chi1 = new Car1();
+		Bus bhi = new Bus();
+
+		// multiple inheritance
+
+		// hybrid inheritance
 	}
 }
