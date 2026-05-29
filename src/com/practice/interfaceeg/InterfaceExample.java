@@ -17,59 +17,138 @@ class TestClass implements TestInterface {
 }
 
 interface Vehicle {
-	void gearUp();
+	void changeGear(int a);
 
-	void increaseSpeed();
+	void speedUp(int a);
+
+	void applyBrakes(int a);
 }
 
 class Bicycle implements Vehicle {
 
+	int speed;
+	int gear;
+
 	@Override
-	public void gearUp() {
-		// TODO Auto-generated method stub
+	public void changeGear(int newGear) {
+		gear = newGear;
 
 	}
 
 	@Override
-	public void increaseSpeed() {
-		// TODO Auto-generated method stub
+	public void speedUp(int increment) {
+		speed = speed + increment;
 
+	}
+
+	@Override
+	public void applyBrakes(int decrement) {
+		speed = speed - decrement;
+	}
+
+	public void printStates() {
+		System.out.println("Speed: " + speed + " Gear: " + gear);
 	}
 
 }
 
 class Bike implements Vehicle {
 
+	int speed;
+	int gear;
+
 	@Override
-	public void gearUp() {
-		// TODO Auto-generated method stub
+	public void changeGear(int newGear) {
+		gear = newGear;
 
 	}
 
 	@Override
-	public void increaseSpeed() {
-		// TODO Auto-generated method stub
+	public void speedUp(int increment) {
+		speed = speed + increment;
 
+	}
+
+	@Override
+	public void applyBrakes(int decrement) {
+		speed = speed - decrement;
+	}
+
+	public void printStates() {
+		System.out.println("Speed: " + speed + " Gear: " + gear);
 	}
 
 }
 
 interface Add {
-
+	int add(int a, int b);
 }
 
 interface Subtract {
-
+	int sub(int a, int b);
 }
 
 class Calc implements Add, Subtract {
 
+	@Override
+	public int add(int a, int b) {
+		return a + b;
+	}
+
+	@Override
+	public int sub(int a, int b) {
+		return a - b;
+	}
+
 }
 
-public class InterfaceExample {
+interface DefaultInterface{
+	final int a = 10;
+	//default method
+	default void display() {
+		System.out.println("Default Hello");
+	}
+	
+	//static method
+	static void displayS() {
+		System.out.println("Static hello");
+	}
+}
+public class InterfaceExample implements DefaultInterface{
 	public static void main(String[] args) {
+
 		TestClass t = new TestClass();
 		t.display();
 		System.out.println(TestInterface.a);
+
+		// Inheritance implementation
+		Bicycle b1 = new Bicycle();
+		b1.changeGear(2);
+		b1.speedUp(3);
+		b1.applyBrakes(1);
+
+		System.out.println("Bicycle present state");
+		b1.printStates();
+
+		Bike b2 = new Bike();
+		b2.changeGear(1);
+		b2.speedUp(4);
+		b2.applyBrakes(3);
+
+		System.out.println("Bike present state");
+		b2.printStates();
+
+		// Multiple inheritance
+		Calc c = new Calc();
+		System.out.println("Addition: " + c.add(2, 3));
+		System.out.println("Subtraction: " + c.sub(8, 2));
+		
+		//Java 8+ 
+		//default method in interface
+		InterfaceExample di = new InterfaceExample();
+		di.display();
+		
+		//static method
+		DefaultInterface.displayS();
 	}
 }
