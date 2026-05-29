@@ -114,6 +114,19 @@ interface DefaultInterface{
 		System.out.println("Static hello");
 	}
 }
+
+interface Vehicle1{
+	private void startEngine() {
+		System.out.println("Engine started");
+	}
+	default void drive() {
+		startEngine();
+		System.out.println("Vehicle is now driving");
+	}
+}
+class Car1 implements Vehicle1{
+	
+}
 public class InterfaceExample implements DefaultInterface{
 	public static void main(String[] args) {
 
@@ -150,5 +163,12 @@ public class InterfaceExample implements DefaultInterface{
 		
 		//static method
 		DefaultInterface.displayS();
+		
+		//Java 9
+		//private method
+		Car1 c1 = new Car1();
+		c1.drive();
+		
+		//extending interface
 	}
 }
