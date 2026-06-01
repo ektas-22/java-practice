@@ -127,6 +127,30 @@ interface Vehicle1{
 class Car1 implements Vehicle1{
 	
 }
+interface A{
+	void method1();
+	void method2();
+}
+interface B extends A{
+	void method3();
+}
+class ExtendedInterfaceEx implements B{
+
+	@Override
+	public void method1() {
+		System.out.println("Method 1");
+	}
+
+	@Override
+	public void method2() {
+		System.out.println("Method 2");
+	}
+
+	@Override
+	public void method3() {
+		System.out.println("Method 3");
+	}
+}
 public class InterfaceExample implements DefaultInterface{
 	public static void main(String[] args) {
 
@@ -170,5 +194,9 @@ public class InterfaceExample implements DefaultInterface{
 		c1.drive();
 		
 		//extending interface
+		ExtendedInterfaceEx ei = new ExtendedInterfaceEx();
+		ei.method1();
+		ei.method2();
+		ei.method3();
 	}
 }
