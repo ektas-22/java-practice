@@ -1,8 +1,11 @@
 package com.practice.interfaceeg;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 @FunctionalInterface
 interface Square {
@@ -41,6 +44,17 @@ public class FunctionalInterfaceExample {
 		
 		//Function - takes one argument and return result, used for transforming data
 		Function<Integer, Integer> function = (value) -> value * value;
+		
+		//Supplier - does not take any input or argument return a single output 
+		Supplier<String> supplier = () -> "Hellow , World! ";
+		
+		List<String> ls = Arrays.asList("Geeks","Geek Quiz","G1","Global","Garage","QA","Dev");
+		Predicate<String> p = (su) -> su.startsWith("G");
+		for(String st: ls) {
+			if(p.test(st)) {
+				System.out.println(st);
+			}
+		}
 		
 	}
 
