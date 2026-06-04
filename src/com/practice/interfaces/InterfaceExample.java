@@ -1,4 +1,4 @@
-package com.practice.interfaceeg;
+package com.practice.interfaces;
 
 interface TestInterface {
 	final int a = 10;

@@ -1,4 +1,4 @@
-package com.practice.interfaceeg;
+package com.practice.interfaces;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

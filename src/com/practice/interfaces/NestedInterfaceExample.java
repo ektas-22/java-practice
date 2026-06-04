@@ -1,4 +1,4 @@
-package com.practice.interfaceeg;
+package com.practice.interfaces;
 
 class Outer {
 	interface Inner {
